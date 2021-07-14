@@ -1,0 +1,88 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Home</title>
+    <style>
+        .b{
+     background: #5433FF;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+    </style>
+</head>
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark my=2">
+        <a class="navbar-brand" href="/home">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">News <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 border border-primary" type="search" placeholder="news" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</div>
+<body class="b">
+   <center>
+    <header class="container">
+        <h1 ><b>NEWS DETECTOR</b></h1>
+        <p>About the news Detector <span class="tag">unknown</span></p>
+        <img src="{{url_for('static',filename='pics/4.jpg')}}" width="600" height="300">
+    </header>
+</center>
+   <div class="col-md-10 black-text text-center text-md-left">
+       <h1 class="h1-responsive font-weight-bold wow fadeInLeft mt-50" style="color:black" data-wow-delay="0.3s">About the project </h1>
+       <hr class="hr-dark wow fadeInLeft" data-wow-delay="0.3s">
+       <h6 class="mb-3 wow fadeInLeft" style="color:black" data-wow-delay="0.3s"> I wanted to test my theory using data science and machine learning. I have compiled Python code that constructs a Passive Aggressive Linear model to predict whether or not an article is fake.The dataset used in this model was created from my dummy data. I am using several features or characteristics about common articles and trying to predict if they are fake or not. In my case, fake is determined by a predetermined label, as well as real.Because both text and numeric features are used in this model, natural language processing (NLP) is beneficial for prediction. I used the common term-frequency inverse document frequency vectorizer to transform the count of text into a weighed matrix of term importance. I then compiled both the TextTransformer and TfidfVectorizer for the text features like title and label.I predicted on my X_test and assigned that to prediction. I used metrics.accuracy_score for determining my accuracy.my accuracy is 88%.</h6>
+   </div><br><br>
+<div class="col-md-12">
+    <h3  class="font-weight-bold" style="black">Exploratory data analysis</h3>
+    <h6 style="black">This data is created by dummy news for purpose of making model.we would classify the news on the basis of title and label.Below are the first fives rows of dataframe. </h6><br>
+   <center><img src="{{url_for('static',filename='pics/5.jpg.png')}} " width="600" height="400"></center><br>
+
+    <h3  class="font-weight-bold" style="black">Feature Engineering </h3>
+    <h6 style="black">In this model we have used the Tfidf-vectorizer and passiveAgressiveClassifier.Tfidf-Vectorizer is a feature extraction .This technique used in feature extraction and text classifier .</h6><br>
+    <center><img src="{{url_for('static',filename='pics/6.png')}} " width="600" height="400"></center><br>
+    <h3 class="font-weight-bold" style="black">Accuracy</h3>
+    <h6 style="black">Perhaps the most gratifying part of the  model process is seeing your results. I predicted on my X_test and assigned that to preds. I used metrics.accuracy_score for determining my accuracy.</h6><br>
+    <h3 style="black">MY MODEL ACCURACY WAS 88%</h3><br>
+    <center><img src="{{url_for('static',filename='pics/7.png')}}" width="600" height="400"></center><br><br>
+    <h4 style="black">This project is made by Amit Singh,  Avinash Kumar and Nitin Gupta</h4>
+
+</div>
+
+
+
+</body>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
