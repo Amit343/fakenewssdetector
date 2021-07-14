@@ -1,1 +1,1 @@
-# fakenewssdetector ....college project
+# fakenewsdetector ....college project
